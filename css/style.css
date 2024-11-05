@@ -1,0 +1,13 @@
+.Content {
+    margin-top: 10vh;
+}
+
+.mainContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.submittDiv {
+    display: flex;
+    justify-content: center;
+}
