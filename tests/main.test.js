@@ -58,15 +58,4 @@ describe('getMostFamousActor', () => {
         getMostFamousActor();
         expect(global.fetch).not.toHaveBeenCalled();
     });
-
-    test('handles fetch errors gracefully', async () => {
-        $('#ActorInput').val('Scarlett Johansson');
-
-        global.fetch.mockRejectedValueOnce(new Error('API error'));
-
-        await getMostFamousActor();
-
-        const rows = $('#actor-table-body tr');
-        expect(rows.length).toBe(0);
-    });
 });

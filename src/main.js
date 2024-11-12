@@ -1,5 +1,3 @@
-const { options } = require('../env.js');
-
 function getMostFamousActor() {
     const inputVal = $('#ActorInput').val();
 
