@@ -63,6 +63,41 @@ The application features:
 
 ---
 
+## Tests
+
+Testing is conducted using `npm test`, which runs the suite of unit tests to verify the functionality of the application. The tests are written with Jest, a popular JavaScript testing framework.
+
+### Test Cases
+
+The following tests ensure the correct operation of the key functions:
+
+#### 1. **`getScoreFromApi`**
+   - **Returns correct score from API result**: Verifies that the function extracts the actor's popularity score from the TMDb API response when the actor is present.
+   - **Returns `undefined` if no matching actor**: Ensures that the function handles cases where the actor is not found in the API response.
+
+#### 2. **`saveTopActors`**
+   - **Updates the table with top actors**: Checks that the function correctly populates the HTML table with the top three actors and their scores.
+
+#### 3. **`getMostFamousActor`**
+   - **Handles empty input gracefully**: Ensures that the function doesn't trigger an API call when the input field is empty.
+   - **Handles fetch errors gracefully**: Confirms that the application can handle API errors without breaking and clears the table in such cases.
+
+### Running Tests
+
+To run the tests:
+1. Ensure all dependencies are installed:
+   ```bash
+   npm install
+   ```
+2. Execute the test suite:
+   ```bash
+   npm test
+   ```
+
+These tests ensure the application works correctly, is resilient to errors, and provides a robust user experience.
+
+---
+
 ## Code Structure
 - **HTML UI**: Defined in `index.html`.
 - **Styles**: Custom CSS in `css/style.css`.

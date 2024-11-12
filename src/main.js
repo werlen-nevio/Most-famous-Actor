@@ -1,5 +1,12 @@
+const { options } = require('../env.js');
+
 function getMostFamousActor() {
     const inputVal = $('#ActorInput').val();
+
+    if (!inputVal || inputVal.length === 0) {
+        return;
+    }    
+
     const actors = inputVal.split(',');
     let actorScores = [];
 
@@ -54,3 +61,9 @@ function saveTopActors(topActors) {
         $('#actor-table-body').append('<tr><td>' + actor.name + '</td><td>' + actor.popularity + '</td></tr>');
     }
 }
+
+module.exports = {
+    getMostFamousActor,
+    getScoreFromApi,
+    saveTopActors,
+};
