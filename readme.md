@@ -80,7 +80,6 @@ The following tests ensure the correct operation of the key functions:
 
 #### 3. **`getMostFamousActor`**
    - **Handles empty input gracefully**: Ensures that the function doesn't trigger an API call when the input field is empty.
-   - **Handles fetch errors gracefully**: Confirms that the application can handle API errors without breaking and clears the table in such cases.
 
 ### Running Tests
 
